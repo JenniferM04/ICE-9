@@ -1,7 +1,10 @@
 extends ../index 
 block content   
-    include ../partials/title
     p homePageParagraph
+    if showGreenHeader 
+        h2.green Header Green 
+    else 
+        h2.blue Header Blue
     form.form(method="post")
         label.label.row1(for="myInput") My Label"
         input.form-control.row1(type="text" id="myInput" name="myInput") 
